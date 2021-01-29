@@ -16,21 +16,19 @@ if dein#load_state('~/.cache/dein')
   endif
 
   " Colorscheme plugin
-  call dein#add('drewtempelmeyer/palenight.vim')
   call dein#add('yonlu/omni.vim')
 
   " Text editing plugins
   call dein#add('machakann/vim-highlightedyank')
-  call dein#add('psliwka/vim-smoothie')
+  call dein#add('psliwka/vim-smoothie') "Smooth scroll
   call dein#add('neoclide/coc.nvim', { 'merged': 0 })
 
   " Syntax highlighting
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('leafgarland/typescript-vim')
-  call dein#add('MaxMEllon/vim-jsx-pretty')
-  call dein#add('peitalin/vim-jsx-typescript')
-  call dein#add('styled-components/vim-styled-components', { 'branch': 'main' })
-  call dein#add('hail2u/vim-css3-syntax')
+  "call dein#add('pangloss/vim-javascript')
+  "call dein#add('leafgarland/typescript-vim')
+  "call dein#add('MaxMEllon/vim-jsx-pretty')
+  "call dein#add('styled-components/vim-styled-components', { 'branch': 'main' })
+  "call dein#add('hail2u/vim-css3-syntax')
 
 
   " Interface
