@@ -30,6 +30,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('MaxMEllon/vim-jsx-pretty')
   call dein#add('styled-components/vim-styled-components', { 'branch': 'main' })
   call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('bfrg/vim-cpp-modern')
 
   " Interface
   call dein#add('wsdjeg/dein-ui.vim')
@@ -40,6 +41,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('liuchengxu/vim-clap')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('bagrat/vim-buffet')
+  call dein#add('Yggdroot/indentLine')
+
 
   call dein#end()
   call dein#save_state()

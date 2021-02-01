@@ -1,6 +1,5 @@
 {
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "prettier.disableSuccessMessage": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
@@ -10,5 +9,6 @@
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
-  "suggest.enablePreview": true
+  "suggest.enablePreview": true,
+  "clangd.path": "/Users/luke/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
