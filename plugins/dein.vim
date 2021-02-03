@@ -17,7 +17,6 @@ if dein#load_state('~/.cache/dein')
 
   " Colorschemes
   call dein#add('yonlu/omni.vim')
-  call dein#add('mhartington/oceanic-next')
 
   " Text editing
   call dein#add('machakann/vim-highlightedyank')
@@ -26,8 +25,8 @@ if dein#load_state('~/.cache/dein')
 
   " Syntax highlighting
   call dein#add('pangloss/vim-javascript')
-  call dein#add('leafgarland/typescript-vim')
   call dein#add('MaxMEllon/vim-jsx-pretty')
+  call dein#add('HerringtonDarkholme/yats.vim')
   call dein#add('styled-components/vim-styled-components', { 'branch': 'main' })
   call dein#add('hail2u/vim-css3-syntax')
   call dein#add('bfrg/vim-cpp-modern')
