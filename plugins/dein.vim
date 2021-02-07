@@ -35,12 +35,23 @@ if dein#load_state('~/.cache/dein')
   call dein#add('wsdjeg/dein-ui.vim')
   call dein#add('Shougo/defx.nvim')
   call dein#add('kristijanhusak/defx-icons')
-  call dein#add('vim-airline/vim-airline')
   call dein#add('liuchengxu/vim-which-key')
   call dein#add('liuchengxu/vim-clap')
   call dein#add('ryanoasis/vim-devicons')
-  call dein#add('bagrat/vim-buffet')
-  call dein#add('Yggdroot/indentLine')
+  call dein#add('glepnir/spaceline.vim', {
+  \ 'hook_add': "
+  \ let g:spaceline_seperate_style = 'none'
+  \ "})
+  call dein#add('bagrat/vim-buffet', {
+  \ 'hook_add': "
+  \ let g:buffet_powerline_separators	= 1\n
+  \ let g:buffet_show_index	= 1\n
+  \ let g:buffet_always_show_tabline = 0\n
+  \ "})
+  call dein#add('nathanaelkane/vim-indent-guides', {
+  \ 'hook_add': "
+  \ let g:indent_guides_enable_on_vim_startup = 1
+  \ "})
 
 
   call dein#end()

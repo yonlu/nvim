@@ -15,5 +15,3 @@ source $HOME/.config/nvim/keys/vim-which-key.vim
 
 " Plugin configs
 source $HOME/.config/nvim/plugins/defx.vim
-source $HOME/.config/nvim/plugins/vim-buffet.vim
-source $HOME/.config/nvim/plugins/indentLine.vim
