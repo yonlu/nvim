@@ -52,7 +52,7 @@ if dein#load_state('~/.cache/dein')
   \ 'hook_add': "
   \ let g:indent_guides_enable_on_vim_startup = 1
   \ "})
-
+  call dein#add('mhinz/vim-startify')
 
   call dein#end()
   call dein#save_state()
