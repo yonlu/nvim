@@ -17,26 +17,25 @@ if dein#load_state('~/.cache/dein')
 
   " Colorschemes
   call dein#add('yonlu/omni.vim')
+  call dein#add('glepnir/zephyr-nvim')
 
   " Text editing
   call dein#add('machakann/vim-highlightedyank')
   call dein#add('psliwka/vim-smoothie')
   call dein#add('neoclide/coc.nvim', { 'merged': 0 })
+  call dein#add('nvim-treesitter/nvim-treesitter')
+  call dein#add('nvim-treesitter/playground')
 
-  " Syntax highlighting
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('MaxMEllon/vim-jsx-pretty')
-  call dein#add('HerringtonDarkholme/yats.vim')
-  call dein#add('styled-components/vim-styled-components', { 'branch': 'main' })
-  call dein#add('hail2u/vim-css3-syntax')
-  call dein#add('bfrg/vim-cpp-modern')
+  "Fuzzy finding
+  call dein#add('nvim-lua/popup.nvim')
+  call dein#add('nvim-lua/plenary.nvim')
+  call dein#add('nvim-telescope/telescope.nvim')
 
   " Interface
   call dein#add('wsdjeg/dein-ui.vim')
   call dein#add('Shougo/defx.nvim')
   call dein#add('kristijanhusak/defx-icons')
   call dein#add('liuchengxu/vim-which-key')
-  call dein#add('liuchengxu/vim-clap')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('glepnir/spaceline.vim', {
   \ 'hook_add': "
@@ -48,10 +47,7 @@ if dein#load_state('~/.cache/dein')
   \ let g:buffet_show_index	= 1\n
   \ let g:buffet_always_show_tabline = 0\n
   \ "})
-  call dein#add('nathanaelkane/vim-indent-guides', {
-  \ 'hook_add': "
-  \ let g:indent_guides_enable_on_vim_startup = 1
-  \ "})
+  call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('mhinz/vim-startify')
 
   call dein#end()
