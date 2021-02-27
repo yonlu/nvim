@@ -27,6 +27,14 @@ let g:which_key_map.f = {
       \ 'g' : [':Telescope live_grep'      , 'grep'],
       \ 'b' : [':Telescope buffers'        , 'buffers'],
       \ 'h' : [':Telescope help_tags'      , 'help tags'],
+      \ 'c' : [':Telescope colorscheme'      , 'colorschemes'],
+      \ }
+
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 'b' : [':Telescope git_branches'      , 'branches'],
+      \ 'c' : [':Telescope git_commits'      , 'commits'],
+      \ 's' : [':Telescope git_status'       , 'status'],
       \ }
 
 " Window mappings
@@ -52,6 +60,11 @@ let g:which_key_map['p'] = {
       \ 'r' : [':call dein#recache_runtimepath()'     , 'reach runtime path'],
       \ }
 
+let g:which_key_map['t'] = {
+      \ 'name' : '+terminal',
+      \ 'n' : [':FloatermNew'      , 'terminal'],
+      \ 'c' : [':FloatermNew --autoclose=0 g++ % -o %< && ./%<'      , 'compiler'],
+      \ }
 " Buffer Mappings
 noremap <Leader><Tab> :Bw<CR>
 noremap <Leader><S-Tab> :Bw!<CR>

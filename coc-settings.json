@@ -10,5 +10,6 @@
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
   "suggest.enablePreview": true,
-  "clangd.path": "/Users/luke/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
+  "clangd.path": "/Users/luke/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+  "elixirLS.dialyzerEnabled": false
 }

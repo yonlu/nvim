@@ -17,6 +17,8 @@ source $HOME/.config/nvim/keys/vim-which-key.vim
 source $HOME/.config/nvim/plugins/defx.vim
 
 lua <<EOF
+require('omni-line')
+
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -33,6 +35,14 @@ require'nvim-treesitter.configs'.setup {
       scope_incremental = "grc",
       node_decremental = "grm",
     },
+  },
+  require "nvim-treesitter.configs".setup {
+    playground = {
+      enable = true,
+      disable = {},
+      updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+      persist_queries = false -- Whether the query persists across vim sessions
+    }
   },
 }
 EOF

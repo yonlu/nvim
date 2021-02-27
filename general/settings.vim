@@ -22,7 +22,8 @@ set showtabline=2                       " Always show tabs
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
-set timeoutlen=500                      " By default timeoutlen is 1000 ms
+set timeoutlen=100                      " By default timeoutlen is 1000 ms
+set ttimeoutlen=10
 set undofile noswapfile
 colorscheme omni
 
@@ -36,6 +37,9 @@ endif
 
 " Note: Make sure the function is defined before `vim-buffet` is loaded.
 function! g:BuffetSetCustomColors()
-  hi! BuffetCurrentBuffer cterm=NONE ctermbg=13 ctermfg=8 guibg=#988bc7 guifg=#000000
-  hi! BuffetTab	cterm=NONE ctermbg=5 ctermfg=8 guibg=#201b2d guifg=#e1e1e6
+  hi! BuffetTab	cterm=NONE ctermbg=5 ctermfg=8 guibg=#191622 guifg=#e1e1e6
+  hi! BuffetCurrentBuffer cterm=NONE ctermbg=13 ctermfg=8 guibg=#252131 guifg=#e1e1e6
+  hi! BuffetBuffer cterm=NONE ctermbg=13 ctermfg=8 guibg=#191622 guifg=#e1e1e6
 endfunction
+
+lua require'colorizer'.setup()

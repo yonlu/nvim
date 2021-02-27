@@ -17,7 +17,7 @@ if dein#load_state('~/.cache/dein')
 
   " Colorschemes
   call dein#add('yonlu/omni.vim')
-  call dein#add('glepnir/zephyr-nvim')
+  call dein#add('gruvbox-community/gruvbox')
 
   " Text editing
   call dein#add('machakann/vim-highlightedyank')
@@ -25,6 +25,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('neoclide/coc.nvim', { 'merged': 0 })
   call dein#add('nvim-treesitter/nvim-treesitter')
   call dein#add('nvim-treesitter/playground')
+  call dein#add('norcalli/nvim-colorizer.lua')
+  call dein#add('elixir-editors/vim-elixir')
 
   "Fuzzy finding
   call dein#add('nvim-lua/popup.nvim')
@@ -34,13 +36,10 @@ if dein#load_state('~/.cache/dein')
   " Interface
   call dein#add('wsdjeg/dein-ui.vim')
   call dein#add('Shougo/defx.nvim')
+  call dein#add('glepnir/galaxyline.nvim', {'branch': 'main'})
+  call dein#add('kyazdani42/nvim-web-devicons')
   call dein#add('kristijanhusak/defx-icons')
   call dein#add('liuchengxu/vim-which-key')
-  call dein#add('ryanoasis/vim-devicons')
-  call dein#add('glepnir/spaceline.vim', {
-  \ 'hook_add': "
-  \ let g:spaceline_seperate_style = 'none'
-  \ "})
   call dein#add('bagrat/vim-buffet', {
   \ 'hook_add': "
   \ let g:buffet_powerline_separators	= 1\n
@@ -49,6 +48,8 @@ if dein#load_state('~/.cache/dein')
   \ "})
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('mhinz/vim-startify')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('voldikss/vim-floaterm')
 
   call dein#end()
   call dein#save_state()
