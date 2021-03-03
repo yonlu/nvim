@@ -20,7 +20,7 @@ highlight default link WhichKeySeperator DiffAdded
 highlight default link WhichKeyGroup     Identifier
 highlight default link WhichKeyDesc      Function
 
-" Fuzzy finder mappings
+" Telescope mappings
 let g:which_key_map.f = {
       \ 'name' : '+find' ,
       \ 'f' : [':Telescope find_files'     , 'file'],
@@ -65,6 +65,7 @@ let g:which_key_map['t'] = {
       \ 'n' : [':FloatermNew'      , 'terminal'],
       \ 'c' : [':FloatermNew --autoclose=0 g++ % -o %< && ./%<'      , 'compiler'],
       \ }
+
 " Buffer Mappings
 noremap <Leader><Tab> :Bw<CR>
 noremap <Leader><S-Tab> :Bw!<CR>
@@ -90,7 +91,6 @@ let g:which_key_map.8 = 'select window-8'
 let g:which_key_map.9 = 'select window-9'
 
 " Others
-
 let g:which_key_map['e'] = [ ':Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>`'                      , 'open explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']

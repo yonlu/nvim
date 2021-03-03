@@ -23,14 +23,11 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
+set fcs=eob:\                           " Replace EndOfBuffer tildes with whitespace
 set ttimeoutlen=10
 set undofile noswapfile
 colorscheme omni
 
-" For Neovim 0.1.3 and 0.1.4
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-" Or if you have Neovim >= 0.1.5
 if (has("termguicolors"))
  set termguicolors
 endif
@@ -41,5 +38,3 @@ function! g:BuffetSetCustomColors()
   hi! BuffetCurrentBuffer cterm=NONE ctermbg=13 ctermfg=8 guibg=#252131 guifg=#e1e1e6
   hi! BuffetBuffer cterm=NONE ctermbg=13 ctermfg=8 guibg=#191622 guifg=#e1e1e6
 endfunction
-
-lua require'colorizer'.setup()

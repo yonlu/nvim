@@ -9,6 +9,7 @@ endif
 
 " Basic settings
 source $HOME/.config/nvim/plugins/dein.vim
+source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/vim-which-key.vim
@@ -18,6 +19,8 @@ source $HOME/.config/nvim/plugins/defx.vim
 
 lua <<EOF
 require('omni-line')
+
+require'colorizer'.setup()
 
 require'nvim-treesitter.configs'.setup {
   highlight = {
