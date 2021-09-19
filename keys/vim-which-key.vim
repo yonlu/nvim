@@ -14,14 +14,10 @@ let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
 
-" Change the colors if you want
-highlight default link WhichKey          Operator
-highlight default link WhichKeySeperator DiffAdded
-highlight default link WhichKeyGroup     Identifier
-highlight default link WhichKeyDesc      Function
+let g:which_key_map['e'] = [ ':Defx -columns=icons:indent:filename:type -resume -toggle -buffer-name=tab`tabpagenr()`<CR>`', 'open explorer' ]
 
 " Telescope mappings
-let g:which_key_map.f = {
+let g:which_key_map['f'] = {
       \ 'name' : '+find' ,
       \ 'f' : [':Telescope find_files'     , 'file'],
       \ 'g' : [':Telescope live_grep'      , 'grep'],
@@ -30,11 +26,26 @@ let g:which_key_map.f = {
       \ 'c' : [':Telescope colorscheme'      , 'colorschemes'],
       \ }
 
-let g:which_key_map.g = {
-      \ 'name' : '+git' ,
-      \ 'b' : [':Telescope git_branches'      , 'branches'],
-      \ 'c' : [':Telescope git_commits'      , 'commits'],
-      \ 's' : [':Telescope git_status'       , 'status'],
+" Git mappings
+let g:which_key_map['g'] = {
+      \ 'name' : '+Git' ,
+      \ 'b' : [':Git branch'      , 'branches'],
+      \ 'c' : [':Git commit'      , 'commits'],
+      \ 's' : [':G'               , 'status'],
+      \ }
+
+" Dein mappings
+let g:which_key_map['p'] = {
+      \ 'name' : '+plugins' ,
+      \ 'u' : [':DeinUpdate'                          , 'update all plugins'],
+      \ 'r' : [':call dein#recache_runtimepath()'     , 'reach runtime path'],
+      \ }
+
+" Terminal
+let g:which_key_map['t'] = {
+      \ 'name' : '+terminal',
+      \ 'n' : [':FloatermNew'      , 'terminal'],
+      \ 'c' : [':FloatermNew --autoclose=0 g++ -Wall -g -std=c++11 % -o %< && ./%<'      , 'compiler'],
       \ }
 
 " Window mappings
@@ -46,6 +57,8 @@ let g:which_key_map['w'] = {
       \ 'j' : ['<C-W>j'      , 'window-below'],
       \ 'l' : ['<C-W>l'      , 'window-right'],
       \ 'k' : ['<C-W>k'      , 'window-up'],
+      \ 's' : ['<C-W>s'      , 'split-below'],
+      \ 'v' : ['<C-W>v'      , 'split-right'],
       \ 'H' : ['<C-W>5<'     , 'expand-window-left'],
       \ 'J' : [':resize +5'  , 'expand-window-below'],
       \ 'L' : ['<C-W>5>'     , 'expand-window-right'],
@@ -53,48 +66,28 @@ let g:which_key_map['w'] = {
       \ '=' : ['<C-W>='      , 'balance-window'],
       \ }
 
-" Dein mappings
-let g:which_key_map['p'] = {
-      \ 'name' : '+plugins' ,
-      \ 'u' : [':DeinUpdate'                          , 'update all plugins'],
-      \ 'r' : [':call dein#recache_runtimepath()'     , 'reach runtime path'],
-      \ }
-
-let g:which_key_map['t'] = {
-      \ 'name' : '+terminal',
-      \ 'n' : [':FloatermNew'      , 'terminal'],
-      \ 'c' : [':FloatermNew --autoclose=0 g++ % -o %< && ./%<'      , 'compiler'],
-      \ }
-
 " Buffer Mappings
-noremap <Leader><Tab> :Bw<CR>
-noremap <Leader><S-Tab> :Bw!<CR>
-noremap <C-t> :tabnew split<CR>
-nmap <leader>1 <Plug>BuffetSwitch(1)
-nmap <leader>2 <Plug>BuffetSwitch(2)
-nmap <leader>3 <Plug>BuffetSwitch(3)
-nmap <leader>4 <Plug>BuffetSwitch(4)
-nmap <leader>5 <Plug>BuffetSwitch(5)
-nmap <leader>6 <Plug>BuffetSwitch(6)
-nmap <leader>7 <Plug>BuffetSwitch(7)
-nmap <leader>8 <Plug>BuffetSwitch(8)
-nmap <leader>9 <Plug>BuffetSwitch(9)
+noremap <Leader><Tab> :BufferClose<CR>
+nmap <leader>1 <Plug>:BufferGoto 1<CR>
+nmap <leader>2 <Plug>:BufferGoto 2<CR>
+nmap <leader>3 <Plug>:BufferGoto 3<CR>
+nmap <leader>4 <Plug>:BufferGoto 4<CR>
+nmap <leader>5 <Plug>:BufferGoto 5<CR>
+nmap <leader>6 <Plug>:BufferGoto 6<CR>
+nmap <leader>7 <Plug>:BufferGoto 7<CR>
+nmap <leader>8 <Plug>:BufferGoto 8<CR>
+nmap <leader>9 <Plug>:BufferGoto 9<CR>
 
-let g:which_key_map.1 = 'select window-1'
-let g:which_key_map.2 = 'select window-2'
-let g:which_key_map.3 = 'select window-3'
-let g:which_key_map.4 = 'select window-4'
-let g:which_key_map.5 = 'select window-5'
-let g:which_key_map.6 = 'select window-6'
-let g:which_key_map.7 = 'select window-7'
-let g:which_key_map.8 = 'select window-8'
-let g:which_key_map.9 = 'select window-9'
-
-" Others
-let g:which_key_map['e'] = [ ':Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>`'                      , 'open explorer' ]
-let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-
+" Ignored labels
+let g:which_key_map.1 = 'which_key_ignore'
+let g:which_key_map.2 = 'which_key_ignore'
+let g:which_key_map.3 = 'which_key_ignore'
+let g:which_key_map.4 = 'which_key_ignore'
+let g:which_key_map.5 = 'which_key_ignore'
+let g:which_key_map.6 = 'which_key_ignore'
+let g:which_key_map.7 = 'which_key_ignore'
+let g:which_key_map.8 = 'which_key_ignore'
+let g:which_key_map.9 = 'which_key_ignore'
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

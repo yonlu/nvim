@@ -16,10 +16,10 @@ source $HOME/.config/nvim/keys/vim-which-key.vim
 
 " Plugin configs
 source $HOME/.config/nvim/plugins/defx.vim
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.icons = 'both'
 
 lua <<EOF
-require('omni-line')
-
 require'colorizer'.setup()
 
 require'nvim-treesitter.configs'.setup {

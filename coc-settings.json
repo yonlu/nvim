@@ -1,15 +1,20 @@
 {
-  "eslint.autoFixOnSave": true,
-  "prettier.disableSuccessMessage": true,
+  "tsserver.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "css",
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "json",
+    "markdown"
   ],
-  "tsserver.formatOnType": true,
-  "coc.preferences.formatOnType": true,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "prettier.singleQuote": true,
   "suggest.enablePreview": true,
-  "clangd.path": "/Users/luke/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
-  "elixirLS.dialyzerEnabled": false
+  "elixirLS.dialyzerEnabled": false,
+  "clangd.path": "/Users/luke/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
+  "clangd.semanticHighlighting": true
 }

@@ -58,6 +58,9 @@ function! s:defx_my_settings() abort
 	nnoremap <silent><buffer><expr> 2u  defx#do_action('cd', ['../..'])
 	nnoremap <silent><buffer><expr> 3u  defx#do_action('cd', ['../../..'])
 	nnoremap <silent><buffer><expr> 4u  defx#do_action('cd', ['../../../..'])
+  nnoremap <silent> <Leader>E
+    \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
+
 
 	" Selection
 	nnoremap <silent><buffer><expr> *  defx#do_action('toggle_select_all')
