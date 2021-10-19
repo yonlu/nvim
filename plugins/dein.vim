@@ -28,15 +28,17 @@ if dein#load_state('~/.cache/dein')
   call dein#add('rhysd/vim-clang-format')
 
   " Highlighting
-  call dein#add('nvim-treesitter/nvim-treesitter')
+  call dein#add('nvim-treesitter/nvim-treesitter', {'hook_post_update': 'TSUpdate'})
   call dein#add('nvim-treesitter/playground')
   call dein#add('machakann/vim-highlightedyank')
   call dein#add('norcalli/nvim-colorizer.lua')
   call dein#add('junegunn/rainbow_parentheses.vim')
   call dein#add('elixir-editors/vim-elixir')
   call dein#add('pangloss/vim-javascript')
+  call dein#add('MaxMEllon/vim-jsx-pretty')
   call dein#add('styled-components/vim-styled-components')
   call dein#add('jackguo380/vim-lsp-cxx-highlight')
+  call dein#add('tomlion/vim-solidity')
 
   " Fuzzy finding
   call dein#add('nvim-lua/plenary.nvim')
@@ -44,7 +46,6 @@ if dein#load_state('~/.cache/dein')
 
   " Interface
   call dein#add('wsdjeg/dein-ui.vim')
-  call dein#add('Shougo/defx.nvim')
   call dein#add('kristijanhusak/defx-icons')
   call dein#add('kyazdani42/nvim-web-devicons')
   call dein#add('liuchengxu/vim-which-key')
@@ -53,6 +54,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mhinz/vim-startify')
   call dein#add('tpope/vim-fugitive')
   call dein#add('voldikss/vim-floaterm')
+  call dein#add('kyazdani42/nvim-tree.lua')
 
   call dein#end()
   call dein#save_state()

@@ -15,12 +15,12 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/vim-which-key.vim
 
 " Plugin configs
-source $HOME/.config/nvim/plugins/defx.vim
 let bufferline = get(g:, 'bufferline', {})
 let bufferline.icons = 'both'
 
 lua <<EOF
 require'colorizer'.setup()
+require'nvim-tree'.setup()
 
 require'nvim-treesitter.configs'.setup {
   highlight = {
@@ -47,5 +47,16 @@ require'nvim-treesitter.configs'.setup {
       persist_queries = false -- Whether the query persists across vim sessions
     }
   },
+}
+
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+
+parser_config.solidity = {
+  install_info = {
+    url = "https://github.com/JoranHonig/tree-sitter-solidity", -- local path or git repo
+    files = {"src/parser.c"},
+    requires_generate_from_grammar = true,
+  },
+  filetype = "solidity", -- if filetype does not agrees with parser name
 }
 EOF

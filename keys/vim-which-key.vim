@@ -14,7 +14,8 @@ let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
 
-let g:which_key_map['e'] = [ ':Defx -columns=icons:indent:filename:type -resume -toggle -buffer-name=tab`tabpagenr()`<CR>`', 'open explorer' ]
+" Explorer mappings
+let g:which_key_map['e'] = [ ':NvimTreeToggle', 'open explorer' ]
 
 " Telescope mappings
 let g:which_key_map['f'] = {
@@ -31,6 +32,7 @@ let g:which_key_map['g'] = {
       \ 'name' : '+Git' ,
       \ 'b' : [':Git branch'      , 'branches'],
       \ 'c' : [':Git commit'      , 'commits'],
+      \ 'l' : [':G log'           , 'log'],
       \ 's' : [':G'               , 'status'],
       \ }
 
@@ -45,7 +47,7 @@ let g:which_key_map['p'] = {
 let g:which_key_map['t'] = {
       \ 'name' : '+terminal',
       \ 'n' : [':FloatermNew'      , 'terminal'],
-      \ 'c' : [':FloatermNew --autoclose=0 g++ -Wall -g -std=c++11 % -o %< && ./%<'      , 'compiler'],
+      \ 'c' : [':FloatermNew --autoclose=0 g++ -Wall -std=c++11 % -o %< && ./%<'      , 'compiler'],
       \ }
 
 " Window mappings
