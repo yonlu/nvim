@@ -140,12 +140,11 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
+  
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
 
 syntax enable                           " Enables syntax highlighing
 set nowrap                              " Display long lines as just one line
@@ -171,6 +170,7 @@ set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set fcs=eob:\                           " Replace EndOfBuffer tildes with whitespace
 set ttimeoutlen=10
 set undofile noswapfile
+set shm+=I
 colorscheme gruvbox
 
 if (has("termguicolors"))
