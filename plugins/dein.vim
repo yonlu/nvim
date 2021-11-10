@@ -51,6 +51,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('styled-components/vim-styled-components')
   call dein#add('jackguo380/vim-lsp-cxx-highlight')
   call dein#add('tomlion/vim-solidity')
+  call dein#add('nikvdp/ejs-syntax')
+
 
   " Fuzzy finding
   call dein#add('nvim-lua/plenary.nvim')
