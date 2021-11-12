@@ -24,7 +24,7 @@ let g:which_key_map['f'] = {
       \ 'g' : [':Telescope live_grep'      , 'grep'],
       \ 'b' : [':Telescope buffers'        , 'buffers'],
       \ 'h' : [':Telescope help_tags'      , 'help tags'],
-      \ 'c' : [':Telescope colorscheme'      , 'colorschemes'],
+      \ 'c' : [':Telescope git_bcommits'      , 'git commits'],
       \ }
 
 " Git mappings
@@ -48,6 +48,12 @@ let g:which_key_map['t'] = {
       \ 'name' : '+terminal',
       \ 'n' : [':FloatermNew'      , 'terminal'],
       \ 'c' : [':FloatermNew --autoclose=0 g++ -Wall -std=c++11 % -o %< && ./%<'      , 'compiler'],
+      \ 'r' : [':FloatermNew --height=0.6 --width=0.4 --wintype=float --name=floaterm1 --position=topright --autoclose=2 ranger'      , 'ranger'],
+      \ }
+
+let g:which_key_map['r'] = {
+      \ 'name' : '+reload',
+      \ 'v' : [':source $MYVIMRC'      , 'vimrc'],
       \ }
 
 " Window mappings
