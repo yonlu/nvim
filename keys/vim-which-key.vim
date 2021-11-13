@@ -74,28 +74,5 @@ let g:which_key_map['w'] = {
       \ '=' : ['<C-W>='      , 'balance-window'],
       \ }
 
-" Buffer Mappings
-noremap <Leader><Tab> :BufferClose<CR>
-nmap <leader>1 <Plug>:BufferGoto 1<CR>
-nmap <leader>2 <Plug>:BufferGoto 2<CR>
-nmap <leader>3 <Plug>:BufferGoto 3<CR>
-nmap <leader>4 <Plug>:BufferGoto 4<CR>
-nmap <leader>5 <Plug>:BufferGoto 5<CR>
-nmap <leader>6 <Plug>:BufferGoto 6<CR>
-nmap <leader>7 <Plug>:BufferGoto 7<CR>
-nmap <leader>8 <Plug>:BufferGoto 8<CR>
-nmap <leader>9 <Plug>:BufferGoto 9<CR>
-
-" Ignored labels
-let g:which_key_map.1 = 'which_key_ignore'
-let g:which_key_map.2 = 'which_key_ignore'
-let g:which_key_map.3 = 'which_key_ignore'
-let g:which_key_map.4 = 'which_key_ignore'
-let g:which_key_map.5 = 'which_key_ignore'
-let g:which_key_map.6 = 'which_key_ignore'
-let g:which_key_map.7 = 'which_key_ignore'
-let g:which_key_map.8 = 'which_key_ignore'
-let g:which_key_map.9 = 'which_key_ignore'
-
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
