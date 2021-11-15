@@ -68,6 +68,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('kyazdani42/nvim-tree.lua')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('psliwka/vim-smoothie')
+  call dein#add('tami5/lspsaga.nvim')
+  call dein#add('onsails/lspkind-nvim')
 
   " Utilities
   call dein#add('tpope/vim-fugitive')
