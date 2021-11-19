@@ -14,7 +14,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "prettier.singleQuote": true,
   "suggest.enablePreview": true,
-  "elixirLS.dialyzerEnabled": false,
   "clangd.path": "/Users/luke/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
-  "clangd.semanticHighlighting": true
+  "clangd.semanticHighlighting": true,
+  "coc.preferences.semanticTokensHighlights": false
 }
