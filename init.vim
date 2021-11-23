@@ -22,6 +22,7 @@ lua <<EOF
 require('lsp-config')
 require('barbar')
 require('nvim-cmp')
+require('lsp-saga')
 require'lualine'.setup()
 require'colorizer'.setup()
 require'nvim-tree'.setup()
